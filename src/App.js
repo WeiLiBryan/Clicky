@@ -3,6 +3,7 @@ import NavHeader from "./components/navHeader/NavHeader";
 import Hero from "./components/hero/Hero";
 import Card from "./components/card/Card";
 import characters from "./characters.json";
+import "./appStyle.css"
 
 
 class App extends Component {
@@ -27,19 +28,21 @@ class App extends Component {
 	render() {
 		return (
 			<div className="main">
-				<NavHeader 
+				<NavHeader
 					top={this.state.topScore}
 					current={this.state.score}
 					message={this.state.message}
 				/>
 				<Hero />
-				{this.state.characters.map(chars => (
-					<Card
-						key={chars.id}
-						charName={chars.name}
-						image={chars.image}
-					/>
-				))}
+				<div className="container">
+					{this.state.characters.map(chars => (
+						<Card
+							key={chars.id}
+							charName={chars.name}
+							image={chars.image}
+						/>
+					))}
+				</div>
 			</div>
 		);
 	}

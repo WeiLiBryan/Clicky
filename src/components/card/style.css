@@ -1,0 +1,12 @@
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.imgDiv {
+    display: block;
+    border: 6px solid black;
+    height: 15rem;
+    width: 15rem;
+    margin: 20px;
+}
