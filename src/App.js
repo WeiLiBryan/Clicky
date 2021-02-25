@@ -7,24 +7,27 @@ import "./appStyle.css"
 
 
 class App extends Component {
-
+	// Declaring the state
 	state = {
 		characters: characters,
 		selected: [],
 		message: "Click a card to begin",
 		score: 0,
-		topScore: 0,
+		topScore: 0
 	};
 
+	// Upon mounting shuffle cards
 	componentDidMount() {
 		this.shuffle();
 	}
 
+	// Sorts all the elements in the array then sets the new state equal to the new sorted array
 	shuffle = () => {
 		const characters = this.state.characters.sort(() => Math.random() - 0.5);
 		this.setState({ characters: characters });
 	}
 
+	// Picks up the key/id of the selected card then checks the selected array to see if that card has already been picked
 	selected = (key) => {
 		this.shuffle();
 
@@ -32,17 +35,18 @@ class App extends Component {
 			this.setState({
 				score: 0,
 				selected: [],
-				message: "You're gonna carry that weight"
+				message: "You're gonna carry that weight..."
 			});
 		} else {
 			this.state.selected.push(key);
 
 			this.setState({
 				score: this.state.score + 1,
-				message: "Bang, keep going"
+				message: "Bang! Keep going"
 			})
 		}
 
+		// If the current score is greater than the top score the top score will auto increment
 		if (this.state.score >= this.state.topScore) {
 			this.setState({
 				topScore: this.state.topScore + 1

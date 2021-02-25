@@ -1,9 +1,19 @@
 .container {
     display: flex;
     padding: 10px;
-    background: brown;
+    background: #682c0e;
     border-radius: 15%;
     flex-wrap: wrap;
     padding: 40px;
     justify-content: center;
 }
+
+.main {
+    background: #c24914;
+}
+
+.containerText {
+    background: #fc8621;
+}
+
+

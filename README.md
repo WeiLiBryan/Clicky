@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Clicky
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+----------------------
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+[Description](#Description) |
+[Deployed Link](#Deployed-Link) |
+[Prerequisites](#Prerequisites) |
+[Technologies](#Technologies-Used) |
+[Website Image](#Website-Image) |
+[Code Snippet](#Code-Snippet) |
+[Authors](#Authors) |
+[License](#License) |
+[Acknowledgements](#Acknowledgements) |
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Application is a memory game that allows users to select cards. Upon selecting a previously selected card, the users score will reset to 0 and the game will reset.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Website Gif](./public/assets/Clicky-gif.gif)
 
-### `npm test`
+## Deployed Link
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+...
 
-### `npm run build`
+## Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+None
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Javascript
+- CSS
+- JSX
+- React
 
-### `npm run eject`
+## Website Image
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Website Image](./public/assets/webpage.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Code Snippet
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Showcased is the conditional statement that allows the application to update the current states and reset if the condition is met.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```Javascript
+selected = (key) => {
+    this.shuffle();
 
-## Learn More
+    if (this.state.selected.indexOf(key) !== -1) {
+        this.setState({
+            score: 0,
+            selected: [],
+            message: "You're gonna carry that weight..."
+        });
+    } else {
+        this.state.selected.push(key);
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+        this.setState({
+            score: this.state.score + 1,
+            message: "Bang! Keep going"
+        })
+    }
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Authors
 
-### Code Splitting
+1. **William W. Bryan**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Github](https://github.com/WeiLiBryan)
+- [LinkedIn](https://www.linkedin.com/in/william-bryan-72730019a/)
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### Making a Progressive Web App
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [Stack Overflow](https://stackoverflow.com)
+- [w3schools](https://w3schools.com)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### [Back to Table of Contents](#table-of-contents)

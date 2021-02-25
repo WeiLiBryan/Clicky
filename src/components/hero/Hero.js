@@ -1,10 +1,10 @@
 import React from "react";
+import "./style.css";
 
 function Hero() {
     return <div className="jumbotron jumbotron-fluid">
-        <div className="container">
-            <h1>Clicky</h1>
-            <p>Test your memory by clicking the a picture that hasn't been clicked yet!</p>
+        <div className="container containerText">
+            <h3>Test your memory skills! Click a portrait to begin</h3>
         </div>
     </div>
 }
