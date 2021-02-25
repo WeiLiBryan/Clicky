@@ -1,13 +1,10 @@
 import React from "react";
 
 function Card(props) {
-    var style = {
-        width: "18rem",
-    };
 
     return (
-        <div className="img" style={style}>
-            <img src={props.image}></img>
+        <div className="img">
+            <img src={process.env.PUBLIC_URL + props.image} alt={props.name}></img>
         </div>
     );
 }
