@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "image": "/assets/images/Ed.png"
+    },
+    {
+        "id": 2,
+        "image": "/assets/images/Ein.png"
+    },
+    {
+        "id": 3,
+        "image": "/assets/images/Faye.png"
+    },
+    {
+        "id": 4,
+        "image": "/assets/images/Jet.png"
+    },
+    {
+        "id": 5,
+        "image": "/assets/images/Judy.png"
+    },
+    {
+        "id": 6,
+        "image": "/assets/images/Julia.png"
+    },
+    {
+        "id": 7,
+        "image": "/assets/images/Punch.png"
+    },
+    {
+        "id": 8,
+        "image": "/assets/images/Spike.png"
+    },
+    {
+        "id": 9,
+        "image": "/assets/images/Vicious.png"
+    }
+]
