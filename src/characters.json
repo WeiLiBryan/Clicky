@@ -1,38 +1,47 @@
 [
     {
         "id": 1,
+        "name": "Edward",
         "image": "/assets/images/Ed.png"
     },
     {
         "id": 2,
+        "name": "Ein",
         "image": "/assets/images/Ein.png"
     },
     {
         "id": 3,
+        "name": "Faye Valentine",
         "image": "/assets/images/Faye.png"
     },
     {
         "id": 4,
+        "name": "Jet Black",
         "image": "/assets/images/Jet.png"
     },
     {
         "id": 5,
+        "name": "Judy",
         "image": "/assets/images/Judy.png"
     },
     {
         "id": 6,
+        "name": "Julia",
         "image": "/assets/images/Julia.png"
     },
     {
         "id": 7,
+        "name": "Punch",
         "image": "/assets/images/Punch.png"
     },
     {
         "id": 8,
+        "name": "Spike Spiegel",
         "image": "/assets/images/Spike.png"
     },
     {
         "id": 9,
+        "name": "Vicious",
         "image": "/assets/images/Vicious.png"
     }
 ]
