@@ -22,7 +22,7 @@ Application is a memory game that allows users to select cards. Upon selecting a
 
 ## Deployed Link
 
-...
+[Link](https://weilibryan.github.io/Clicky/)
 
 ## Prerequisites
 
