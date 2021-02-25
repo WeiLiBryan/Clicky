@@ -21,8 +21,33 @@ class App extends Component {
 	}
 
 	shuffle = () => {
-		const characters = this.state.characters.sort(() => Math.floor(Math.random() * 10));
+		const characters = this.state.characters.sort(() => Math.random() - 0.5);
 		this.setState({ characters: characters });
+	}
+
+	selected = (key) => {
+		this.shuffle();
+
+		if (this.state.selected.indexOf(key) !== -1) {
+			this.setState({
+				score: 0,
+				selected: [],
+				message: "You're gonna carry that weight"
+			});
+		} else {
+			this.state.selected.push(key);
+
+			this.setState({
+				score: this.state.score + 1,
+				message: "Bang, keep going"
+			})
+		}
+
+		if (this.state.score >= this.state.topScore) {
+			this.setState({
+				topScore: this.state.topScore + 1
+			})
+		}
 	}
 
 	render() {
@@ -40,6 +65,8 @@ class App extends Component {
 							key={chars.id}
 							charName={chars.name}
 							image={chars.image}
+							selected={this.selected}
+							id={chars.id}
 						/>
 					))}
 				</div>
